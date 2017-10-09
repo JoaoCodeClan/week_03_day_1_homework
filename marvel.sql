@@ -36,9 +36,11 @@ INSERT INTO people (name) VALUES ('Huascar Suave');
 INSERT INTO people (name) VALUES ('Rob Williams');
 INSERT INTO people (name) VALUES ('Laurence Woodward');
 INSERT INTO people (name) VALUES ('Andre Zyczkowski');
-
-
-
+UPDATE people SET name = 'Adam Conway' WHERE name = 'Adm Conway';
+INSERT INTO people(name) VALUES ( 'Tony Goncalves');
+DELETE FROM people WHERE name = 'Craig Morton';
+UPDATE people SET name = 'Tony Stark' WHERE id = 11 ;
+UPDATE people SET name = 'David Banner' WHERE id = 12;
 INSERT INTO movies (title, year, show_time) VALUES ('Iron Man', 2008, '15:15');
 INSERT INTO movies (title, year, show_time) VALUES ('The Incredible Hulk', 2008, '22:05');
 INSERT INTO movies (title, year, show_time) VALUES ('Iron Man 2', 2010, '18:05');
@@ -55,6 +57,10 @@ INSERT INTO movies (title, year, show_time) VALUES ('Ant-Man', 2015, '15:20');
 INSERT INTO movies (title, year, show_time) VALUES ('Captain America: Civil War', 2016, '22:45');
 INSERT INTO movies (title, year, show_time) VALUES ('Doctor Strange', 2016, '22:00');
 INSERT INTO movies (title, year, show_time) VALUES ('Guardians of the Galaxy 2', 2017, '15:30');
+INSERT INTO movies (title, year, show_time) VALUES ('Guardians of the Galaxy 2', 2017, '00:00');
+DELETE FROM movies WHERE title = 'Batman Begins';
+UPDATE movies SET show_time = '18:55' WHERE id = 11;
 
-
+DELETE FROM movies WHERE id = 11 OR title = 'Ant-Man';
+-- SELECT name FROM people WHERE name = 'Joao Nequinha';
 SELECT * FROM movies;
